@@ -18,9 +18,8 @@ from django.contrib import admin
 from django.urls import path,re_path
 
 
-from app.views import SubmitContactForm,log_visit, get_visit_count
+from app.views import SubmitContactForm,log_visit, get_visit_count,index
 
-from app.views import SubmitContactForm,DonationCreateAPIView,index
 
 
 urlpatterns = [
