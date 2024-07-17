@@ -15,12 +15,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,re_path
+
 
 from app.views import SubmitContactForm,log_visit, get_visit_count
 
+from app.views import SubmitContactForm,DonationCreateAPIView,index
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    re_path(r'^.*$',index, name='index'),
     path('contact/',SubmitContactForm.as_view(),name='Contact-Form'),
     path('log_visit/', log_visit, name='log_visit'),
     path('get_visit_count/', get_visit_count, name='get_visit_count'),
