@@ -7,11 +7,5 @@ class ContactFormSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-# serializers.py
-from rest_framework import serializers
-from .models import Donation
+# register
 
-class DonationSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Donation
-        fields = '__alll__'

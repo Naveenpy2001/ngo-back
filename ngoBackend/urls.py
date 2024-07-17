@@ -17,10 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from app.views import SubmitContactForm,DonationCreateAPIView
+from app.views import SubmitContactForm,log_visit, get_visit_count
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('contact/',SubmitContactForm.as_view(),name='Contact-Form'),
-    path('donation/',DonationCreateAPIView.as_view(),name='donation')
+    path('log_visit/', log_visit, name='log_visit'),
+    path('get_visit_count/', get_visit_count, name='get_visit_count'),
 ]
